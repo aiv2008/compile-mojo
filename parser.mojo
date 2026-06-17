@@ -2,7 +2,6 @@ from std.memory import ArcPointer
 from std.collections.string import Codepoint
 from ast import Rule
 
-
 @fieldwise_init
 struct Parser(Movable):
     var input: String

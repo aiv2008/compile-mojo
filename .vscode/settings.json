@@ -1,3 +1,9 @@
 {
-  "mojo.sdk.path": "/usr/local"
+  "workbench.statusBar.visible": true,
+  "zenMode.hideStatusBar": false,
+  "python.defaultInterpreterPath": "${workspaceFolder}/.venv/bin/python",
+  "mojo.preferPixiEnv": false,
+  "[mojo]": {
+    "editor.defaultFormatter": "modular-mojotools.vscode-mojo"
+  }
 }
