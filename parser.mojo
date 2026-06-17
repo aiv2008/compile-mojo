@@ -72,11 +72,14 @@ struct Parser(Movable):
             
         return ""
 
-fn is_letter(ch: StringSlice) -> Bool:
-        return ch.islower() or ch.isupper()
+def is_letter(b: Byte) -> Bool:
+    return (b >= Byte(ord('a')) and b <= Byte(ord('z'))) or (b >= Byte(ord('A')) and b <= Byte(ord('Z')))
 
-fn is_identifier_start(ch: StringSlice) -> Bool:
-    return is_letter(ch) or ch == "_"
+def is_identifier_start(ch: Byte) -> Bool:
+    return is_letter(ch) or ch == Byte(ord('_')) 
 
-fn is_identifier_char(ch: StringSlice) -> Bool:
-    return is_letter(ch) or ch.is_ascii_digit() or ch == "_"
+def is_ascii_digit(b: Byte) -> Bool:
+    return Codepoint(UInt8(b)).is_ascii_digit()
+
+def is_identifier_char(ch: Byte) -> Bool:
+    return is_letter(ch) or is_ascii_digit(ch) or ch == Byte(ord('_')) 
