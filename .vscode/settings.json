@@ -1,6 +1,4 @@
 {
-  "workbench.statusBar.visible": true,
-  "zenMode.hideStatusBar": false,
   "python.defaultInterpreterPath": "${workspaceFolder}/.venv/bin/python",
   "mojo.preferPixiEnv": false,
   "[mojo]": {
